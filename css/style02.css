@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: hsl(0, 0%, 5%);
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+html {
+	background: hsl(0, 3%, 6%);
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.ancho {
+	position: relative !important;
+	width: 100vw;
+	height: calc((10 / 16) * 120vw);
+	left: calc(50% - 50vw);
+	top: calc(50% - (((10 / 16) * 110vw) / 2));
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+	.ancho {
+		top: calc(50% - (((10 / 16) * 120vw) / 2));
+	}
+}
+
+.alto {
+	width: calc((16 / 10) * 83vh);
+	height: 100vh;
+	top: calc(50% - 50vh);
+	left: calc(50% - (((16 / 10) * 83vh) / 2));
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.abs {
+	position: absolute;
+}
+
+.back {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.portada {
+	position: absolute;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/portada2.jpg);
+}
+
+.adelante {
+	position: absolute;
+	width: 6%;
+	height: 8%;
+	top: 86.5%;
+    border-radius: 100px;
+    left: 13%;
+	bottom: 2.6%;
+	cursor: pointer;
+}
+
+.atras {
+	position: absolute;
+	width: 6%;
+	height: 8%;
+	top: 86.5%;
+    border-radius: 100px;
+    left: 5%;
+	bottom: 2.6%;
+	cursor: pointer;
+}
+
+.boton1 {
+	position: absolute;
+    width: 34%;
+    height: 10.4%;
+    top: 27.7%;
+    right: 12.1%;
+	cursor: pointer;
+}
+
+.boton1 img {
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.3s ease;
+}
+
+
+.boton1:hover img {
+	opacity: 0; /* Se vuelve completamente transparente */
+}
+
+.boton2 {
+	position: absolute;
+    width: 34%;
+    height: 10.4%;
+    top: 40.7%;
+    right: 12.1%;
+	cursor: pointer;
+}
+
+.boton2 img {
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.3s ease;
+}
+
+.boton2:hover img {
+	opacity: 0; /* Se vuelve completamente transparente */
+}
+
+@media screen and (max-width: 500px) {
+	/* .portada {
+		background-image: url('../images/Responsive/portada-01-mobile.jpg');
+		background-size: contain;
+		background-position-y: top;
+	} */
+
+	.btn1 {
+		width: 8.2%;
+		height: 4.6%;
+		top: 40.3%;
+		right: 5.5%;
+	}
+
+	.video {
+		width: 36.9%;
+		height: 20.4%;
+		top: 61%;
+		left: 36.5%;
+	}
+
+	.video img {
+		height: 100%;
+	}
+
+	.espora {
+		width: 51.1%;
+		height: 29.5%;
+		top: 60.9%;
+		left: 50.3%;
+	}
+}
+
+.mobile {
+	height: 100dvh;
+	align-items: center;
+}
+
+.mobile-container {
+	position: relative;
+}

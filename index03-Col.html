@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="initial-scale = 1, user-scalable = no" />
+		<link rel="stylesheet" href="./css/style03.css" />
+		<title>Bisolvon Col</title>
+	</head>
+
+	<body class="ancho">
+		<div id="container">
+			<div class="abs back portada"></div>
+
+			<!-- menu -->
+			<a href="./index12-Col.html" class="adelante"></a>
+			<a href="./index02-Col.html" class="atras"></a>
+
+			<!-- Audio -->
+			<audio id="sonido-clic">
+				<source src="./images/button1.mp3" type="audio/mpeg" />
+			</audio>
+
+		</div>
+
+		<script src="https://eml.com.co/Ayuda_visual_Gamabenceno/js/jquery.min.js"></script>
+		<script src="https://eml.com.co/Ayuda_visual_Gamabenceno/js/jquery-3.2.1.min.js"></script>
+		<script src="https://eml.com.co/Ayuda_visual_Gamabenceno/js/script.js"></script>
+
+		<!-- Sonido-->
+		<script>
+			const adelante = document.querySelector('.adelante')
+			const atras = document.querySelector('.atras')
+			const sonido = document.getElementById('sonido-clic')
+
+			function manejarClickConSonido(enlace) {
+				enlace.addEventListener('click', function (event) {
+					event.preventDefault()
+					sonido.currentTime = 0
+					sonido.play()
+
+					setTimeout(() => {
+						window.location.href = enlace.href
+					}, 800) // ajusta este tiempo a la duración real del sonido
+				})
+			}
+
+			manejarClickConSonido(adelante)
+			manejarClickConSonido(atras)
+		</script>
+
+		<script>
+			const dropContainer = document.querySelector('.droplets')
+
+			function createDrop() {
+				const drop = document.createElement('div')
+				drop.classList.add('droplet')
+
+				// Posición aleatoria dentro del microbio
+				drop.style.left = `${Math.random() * 80 + 10}%`
+				drop.style.top = '80%'
+
+				dropContainer.appendChild(drop)
+
+				// Eliminar la gota después de la animación
+				setTimeout(() => {
+					drop.remove()
+				}, 4000)
+			}
+
+			// Genera gotas cada 500 ms
+			setInterval(createDrop, 500)
+		</script>
+	</body>
+</html>

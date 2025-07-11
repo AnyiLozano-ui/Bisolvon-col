@@ -1,0 +1,700 @@
+@font-face {
+	font-family: MuseoSans;
+	src: url(../images/MuseoSans_1.otf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: hsl(0, 0%, 5%);
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+html {
+	background: hsl(0, 3%, 6%);
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.ancho {
+	position: relative !important;
+	width: 100vw;
+	height: calc((10 / 16) * 120vw);
+	left: calc(50% - 50vw);
+	top: calc(50% - (((10 / 16) * 110vw) / 2));
+}
+
+#tiempo {
+	top: 28%;
+	position: absolute;
+	left: 28%;
+	bottom: 0;
+	margin: auto;
+	width: auto;
+	font-size: 200%;
+	color: white;
+	font-family: MuseoSans;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+	.ancho {
+		top: calc(50% - (((10 / 16) * 120vw) / 2));
+	}
+}
+
+.alto {
+	width: calc((16 / 10) * 83vh);
+	height: 100vh;
+	top: calc(50% - 50vh);
+	left: calc(50% - (((16 / 10) * 83vh) / 2));
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.abs {
+	position: absolute;
+}
+
+.back {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.portada {
+	position: absolute;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/portada5.jpg);
+}
+
+.buena {
+	position: absolute;
+	width: 38.1%;
+    top: 66.5%;
+    left: 2.7%;
+    height: 11%;
+}
+
+.buena img {
+	width: 100%;
+	height: 100%;
+}
+
+.mal {
+	position: absolute;
+	width: 38.1%;
+    top: 40.5%;
+    left: 2.7%;
+    height: 11%;
+}
+
+.mal img {
+	width: 100%;
+	height: 100%;
+}
+
+.mal1 {
+	position: absolute;
+	width: 38.1%;
+    top: 53.5%;
+    left: 2.7%;
+    height: 11%;
+}
+
+.mal1 img {
+	width: 100%;
+	height: 100%;
+}
+
+.mal2 {
+	position: absolute;
+	width: 38.1%;
+    top: 79.5%;
+    left: 2.7%;
+    height: 11%;
+}
+
+.mal2 img {
+	width: 100%;
+	height: 100%;
+}
+
+.reloj {
+	position: absolute;
+	width: 9%;
+	top: 6.3%;
+	right: 5%;
+}
+
+.reloj img {
+	width: 100%;
+	height: 100%;
+}
+
+/* gotas 3 */
+.gotas13 {
+	position: absolute;
+	width: 6.8%;
+	height: 9%;
+	top: 48%;
+	right: 19%;
+	bottom: 2.6%;
+	animation: magicFloatUp 6s infinite ease-in-out;
+	animation-delay: 0s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Si usas varias gotas13, puedes variarlas con JS o múltiples clases */
+.gotas13 img {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.6));
+	animation: glowPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes magicFloatUp {
+	0% {
+		transform: translateY(0) translateX(0px) rotate(0deg) scale(0.9);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	30% {
+		transform: translateY(-60px) translateX(-10px) rotate(10deg) scale(1.1);
+	}
+	50% {
+		transform: translateY(-120px) translateX(10px) rotate(-8deg) scale(1);
+	}
+	70% {
+		transform: translateY(-180px) translateX(-6px) rotate(5deg) scale(1.05);
+		opacity: 0.7;
+	}
+	100% {
+		transform: translateY(-240px) translateX(0px) rotate(0deg) scale(0.95);
+		opacity: 0;
+	}
+}
+
+@keyframes glowPulse {
+	0%,
+	100% {
+		filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
+	}
+	50% {
+		filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.9));
+	}
+}
+
+/* gotas 3 hacia abajo */
+.gotas14 {
+	position: absolute;
+	width: 2%;
+    height: 4.2%;
+    top: 45%;
+    right: 33.7%;
+	bottom: 2.6%;
+	animation: magicFloatDown 12s infinite ease-in-out;
+	animation-delay: 0s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.gotas14 img {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.6));
+	animation: glowPulse 1s infinite ease-in-out;
+}
+
+@keyframes magicFloatDown {
+	0% {
+		transform: translateY(0) translateX(0px) rotate(0deg) scale(0.9);
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.8;
+	}
+	30% {
+		transform: translateY(60px) translateX(-10px) rotate(10deg) scale(1.1);
+	}
+	50% {
+		transform: translateY(120px) translateX(10px) rotate(-8deg) scale(1);
+	}
+	70% {
+		transform: translateY(180px) translateX(-6px) rotate(5deg) scale(1.05);
+		opacity: 0.4;
+	}
+	100% {
+		transform: translateY(240px) translateX(0px) rotate(0deg) scale(0.95);
+		opacity: 0;
+	}
+}
+
+@keyframes glowPulse {
+	0%,
+	100% {
+		filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
+	}
+	50% {
+		filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.9));
+	}
+}
+
+/* gotas 3 hacia abajo */
+.gotas15 {
+	position: absolute;
+	width: 5.1%;
+	height: 7.2%;
+	top: 64.6%;
+    left: 101.5%;
+}
+
+.gotas15 img {
+	width: 100%;
+	height: 100%;
+	animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+.droplets {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	overflow: visible;
+	top: 27%;
+	right: 864%;
+}
+
+/* Gota individual */
+.droplet {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background: rgba(50, 240, 21, 0.953); /* color tipo agua */
+	border-radius: 50%;
+	opacity: 0;
+	animation: floatDrop 4s ease-in-out forwards;
+}
+
+@keyframes floatDrop {
+	0% {
+		transform: translate(0, 0) scale(0.5);
+		opacity: 1;
+	}
+	30% {
+		transform: translate(-10px, -40px) scale(0.8);
+		opacity: 1;
+	}
+	60% {
+		transform: translate(10px, -90px) scale(0.7);
+		opacity: 0.1;
+	}
+	100% {
+		transform: translate(-5px, -130px) scale(0.9);
+		opacity: 0;
+	}
+}
+
+/* gotas 3 hacia abajo */
+.gotas16 {
+	position: absolute;
+	width: 3%;
+    height: 4.1%;
+    top: 37.7%;
+    right: 28.5%;
+	transform: translate(-50%, -50%);
+	animation: idlePulseVibrate 1.5s infinite ease-in-out;
+	opacity: 1;
+	pointer-events: none;
+}
+
+.gotas16 img {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0 0 6px rgba(120, 255, 200, 0.6));
+	animation: steadyGlow 2.5s infinite ease-in-out;
+}
+
+/* Pulso con pequeña vibración */
+@keyframes idlePulseVibrate {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	20% {
+		transform: translate(-50%, -50%) scale(1.05) rotate(-1deg);
+	}
+	40% {
+		transform: translate(-50%, -50%) scale(0.97) rotate(1deg);
+	}
+	60% {
+		transform: translate(-50%, -50%) scale(1.03) rotate(-0.5deg);
+	}
+	80% {
+		transform: translate(-50%, -50%) scale(1) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+/* Brillo sutil que respira */
+@keyframes steadyGlow {
+	0%,
+	100% {
+		filter: drop-shadow(0 0 4px rgba(120, 255, 200, 0.4));
+	}
+	50% {
+		filter: drop-shadow(0 0 10px rgba(120, 255, 200, 0.9));
+	}
+}
+
+/* gotas 3 */
+.gotas17 {
+	position: absolute;
+	width: 6%;
+    height: 8%;
+    top: 68%;
+    right: 20.7%;
+	bottom: 2.6%;
+	animation: magicFloatDown 6s infinite ease-in-out; /* Aquí el cambio */
+	animation-delay: 0s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Si usas varias gotas13, puedes variarlas con JS o múltiples clases */
+.gotas17 img {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.6));
+	animation: magicFloatUp 6s infinite ease-in-out;
+}
+
+@keyframes magicFloatDown {
+	0% {
+		transform: translateY(0) translateX(0px) rotate(0deg) scale(0.9);
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.8;
+	}
+	30% {
+		transform: translateY(60px) translateX(10px) rotate(10deg) scale(1.1);
+	}
+	50% {
+		transform: translateY(120px) translateX(-10px) rotate(-8deg) scale(1);
+	}
+	70% {
+		transform: translateY(180px) translateX(6px) rotate(5deg) scale(1.05);
+		opacity: 0.3;
+	}
+	100% {
+		transform: translateY(240px) translateX(0px) rotate(0deg) scale(0.95);
+		opacity: 0;
+	}
+}
+
+@keyframes glowPulse {
+	0%,
+	100% {
+		filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
+	}
+	50% {
+		filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.9));
+	}
+}
+
+.gotas18 {
+	position: absolute;
+	width: 3%;
+	top: 54%;
+    right: 42.1%;
+	animation: ticTac 0.6s infinite ease-in-out;
+	transform-origin: center;
+}
+
+@keyframes ticTac {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(3deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(-3deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.gotas18 img {
+	width: 100%;
+	height: 100%;
+}
+
+.gotas19 {
+	position: absolute;
+	width: 6.4%;
+	height: 8%;
+	top: 73.9%;
+    right: 9.7%;
+	transform-origin: center;
+	animation: fragmentExplodeLoop 7s infinite ease-in-out;
+	pointer-events: none;
+}
+
+.gotas19 img {
+	width: 100%;
+	height: 100%;
+	animation: shimmerDisperse 7s infinite ease-in-out;
+	filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.6));
+}
+
+@keyframes fragmentExplodeLoop {
+	0% {
+		transform: scale(1) rotate(0deg) skew(0deg, 0deg);
+		opacity: 1;
+		filter: blur(0px);
+	}
+	25% {
+		transform: scale(1.1) rotate(2deg) skew(1deg, -1deg);
+		opacity: 0.85;
+	}
+	50% {
+		transform: scale(0.8) rotate(-8deg) skew(-5deg, 5deg);
+		opacity: 0.4;
+		filter: blur(1px);
+	}
+	75% {
+		transform: scale(1.2) rotate(6deg) skew(3deg, -3deg);
+		opacity: 0.9;
+		filter: blur(0.5px);
+	}
+	100% {
+		transform: scale(1) rotate(0deg) skew(0deg, 0deg);
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+@keyframes shimmerDisperse {
+	0%,
+	100% {
+		filter: drop-shadow(0 0 6px rgba(0, 255, 200, 0.3));
+	}
+	40% {
+		filter: drop-shadow(0 0 20px rgba(0, 255, 200, 1)) blur(0.5px);
+	}
+	60% {
+		filter: drop-shadow(0 0 8px rgba(0, 255, 200, 0.4)) blur(1px);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	/* .portada {
+		background-image: url('../images/Responsive/portada-01-mobile.jpg');
+		background-size: contain;
+		background-position-y: top;
+	} */
+
+	.btn1 {
+		width: 8.2%;
+		height: 4.6%;
+		top: 40.3%;
+		right: 5.5%;
+	}
+
+	.video {
+		width: 36.9%;
+		height: 20.4%;
+		top: 61%;
+		left: 36.5%;
+	}
+
+	.video img {
+		height: 100%;
+	}
+
+	.espora {
+		width: 51.1%;
+		height: 29.5%;
+		top: 60.9%;
+		left: 50.3%;
+	}
+
+	#tiempo {
+		font-size: 60%;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 32%;
+	}
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+	#tiempo {
+		font-size: 140%;
+	}
+}
+
+.mobile {
+	height: 100dvh;
+	align-items: center;
+}
+
+.mobile-container {
+	position: relative;
+}
+
+/* modal  */
+.openModal {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 37.9%;
+	height: 10.2%;
+	right: 6.8%;
+	top: 46.2%;
+	z-index: 100;
+	cursor: pointer;
+	border-radius: 64px;
+}
+
+.modal img {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 300;
+	display: block;
+	left: 0%;
+	top: 0%;
+}
+
+.closeModal {
+	position: absolute;
+	width: 17%;
+	height: 10%;
+	z-index: 1200;
+	top: 86%;
+	right: 41%;
+	cursor: pointer;
+}
+
+/* modal 1 */
+.openModal1 {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 37.9%;
+	height: 10.2%;
+	right: 6.8%;
+	top: 58.2%;
+	z-index: 100;
+	cursor: pointer;
+	border-radius: 64px;
+}
+
+.modal1 img {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1100;
+	display: block;
+	left: 0%;
+	top: 0%;
+}
+
+.closeModal1 {
+	position: absolute;
+	width: 17%;
+	height: 10%;
+	z-index: 1200;
+	top: 85%;
+	right: 41%;
+	cursor: pointer;
+}
+
+.next {
+	position: absolute;
+	width: 6%;
+	height: 8%;
+	top: 87%;
+    border-radius: 100px;
+    right: 45.6%;
+	bottom: 2.6%;
+	cursor: pointer;
+	z-index: 1300;
+}
+
+.vida1 {
+	position: absolute;
+	width: 4.3%;
+	top: 6.5%;
+	left: 4.7%;
+}
+
+.vida1 img {
+	width: 100%;
+	height: 100%;
+}
+
+.vida2 {
+	position: absolute;
+	width: 4.3%;
+	top: 6.5%;
+	left: 10.3%;
+}
+
+.vida2 img {
+	width: 100%;
+	height: 100%;
+}
+
+.vida3 {
+	position: absolute;
+	width: 4.3%;
+	top: 6.5%;
+	left: 15.9%;
+}
+
+.vida3 img {
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="initial-scale = 1, user-scalable = no" />
+		<link rel="stylesheet" href="./css/style12.css" />
+		<title>Bisolvon Col</title>
+	</head>
+
+	<body class="ancho">
+		<div id="container">
+			<div class="abs back portada"></div>
+			<a href="./index04-Col.html" class="adelante"></a>
+
+			<!-- Audio -->
+			<audio id="sonido-clic">
+				<source src="./images/button1.mp3" type="audio/mpeg" />
+			</audio>
+		</div>
+
+		<script src="https://eml.com.co/Ayuda_visual_Gamabenceno/js/jquery.min.js"></script>
+		<script src="https://eml.com.co/Ayuda_visual_Gamabenceno/js/jquery-3.2.1.min.js"></script>
+		<script src="https://eml.com.co/Ayuda_visual_Gamabenceno/js/script.js"></script>
+		<!-- Sonido-->
+		<script>
+			const adelante = document.querySelector('.adelante')
+			const sonido = document.getElementById('sonido-clic')
+
+			function manejarClickConSonido(enlace) {
+				enlace.addEventListener('click', function (event) {
+					event.preventDefault()
+					sonido.currentTime = 0
+					sonido.play()
+
+					setTimeout(() => {
+						window.location.href = enlace.href
+					}, 800) // ajusta este tiempo a la duración real del sonido
+				})
+			}
+
+			manejarClickConSonido(adelante)
+		</script>
+	</body>
+</html>

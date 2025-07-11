@@ -1,0 +1,356 @@
+@font-face {
+	font-family: MuseoSans;
+	src: url(../images/MuseoSans_1.otf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: hsl(0, 0%, 5%);
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+html {
+	background: hsl(0, 3%, 6%);
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.ancho {
+	position: relative !important;
+	width: 100vw;
+	height: calc((10 / 16) * 120vw);
+	left: calc(50% - 50vw);
+	top: calc(50% - (((10 / 16) * 110vw) / 2));
+}
+
+#tiempo {
+	top: 28%;
+    position: absolute;
+    left: 31%;
+    bottom: 0;
+    margin: auto;
+    width: auto;
+    font-size: 200%;
+	font-family: MuseoSans;
+    color: white;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+	.ancho {
+		top: calc(50% - (((10 / 16) * 120vw) / 2));
+	}
+}
+
+.alto {
+	width: calc((16 / 10) * 83vh);
+	height: 100vh;
+	top: calc(50% - 50vh);
+	left: calc(50% - (((16 / 10) * 83vh) / 2));
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.abs {
+	position: absolute;
+}
+
+.back {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.portada {
+	position: absolute;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/pregunta18.jpg);
+}
+
+.buena {
+	position: absolute;
+	width: 38.1%;
+    top: 53.7%;
+    left: 2.7%;
+    height: 11%;
+}
+
+.buena img {
+	width: 100%;
+	height: 100%;
+}
+
+.mal {
+	position: absolute;
+	width: 38.1%;
+    top: 40.5%;
+    left: 2.7%;
+    height: 11%;
+}
+
+.mal img {
+	width: 100%;
+	height: 100%;
+}
+
+.mal1 {
+	position: absolute;
+	width: 38.1%;
+    top: 66.5%;
+    left: 2.7%;
+    height: 11%;
+}
+
+.mal1 img {
+	width: 100%;
+	height: 100%;
+}
+
+.mal2 {
+	position: absolute;
+	width: 38.1%;
+    top: 79.5%;
+    left: 2.7%;
+    height: 11%;
+}
+
+.mal2 img {
+	width: 100%;
+	height: 100%;
+}
+
+.reloj {
+	position: absolute;
+	width: 9%;
+	top: 6.3%;
+	right: 5%;
+}
+
+.reloj img {
+	width: 100%;
+	height: 100%;
+}
+
+.onda {
+	position: absolute;
+	width: 42%;
+    top: 63.6%;
+    right: -3.3%;
+	transform: translate(-50%, -50%) scale(0.5);
+	pointer-events: none;
+	opacity: 0.6;
+	animation: expandir 2s ease-out infinite;
+  }
+  
+  .onda img {
+	width: 100%;
+	height: 100%;
+  }
+  
+  @keyframes expandir {
+	0% {
+	  transform: translate(-50%, -50%) scale(0.5);
+	  opacity: 0.6;
+	}
+	100% {
+	  transform: translate(-50%, -50%) scale(3);
+	  opacity: 0;
+	}
+  }
+
+
+
+@media screen and (max-width: 500px) {
+	/* .portada {
+		background-image: url('../images/Responsive/portada-01-mobile.jpg');
+		background-size: contain;
+		background-position-y: top;
+	} */
+
+	.btn1 {
+		width: 8.2%;
+		height: 4.6%;
+		top: 40.3%;
+		right: 5.5%;
+	}
+
+	.video {
+		width: 36.9%;
+		height: 20.4%;
+		top: 61%;
+		left: 36.5%;
+	}
+
+	.video img {
+		height: 100%;
+	}
+
+	.espora {
+		width: 51.1%;
+		height: 29.5%;
+		top: 60.9%;
+		left: 50.3%;
+	}
+
+	#tiempo {
+		font-size: 60%;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 32%;
+	}
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+	#tiempo {
+		font-size: 140%;
+	}
+}
+
+.mobile {
+	height: 100dvh;
+	align-items: center;
+}
+
+.mobile-container {
+	position: relative;
+}
+
+/* modal  */
+.openModal {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 37.9%;
+	height: 10.2%;
+	right: 6.8%;
+	top: 46.2%;
+	z-index: 100;
+	cursor: pointer;
+	border-radius: 64px;
+}
+
+.modal img {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 300;
+	display: block;
+	left: 0%;
+	top: 0%;
+}
+
+.closeModal {
+	position: absolute;
+	width: 17%;
+	height: 10%;
+	z-index: 1200;
+	top: 86%;
+	right: 41%;
+	cursor: pointer;
+}
+
+/* modal 1 */
+.openModal1 {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 37.9%;
+	height: 10.2%;
+	right: 6.8%;
+	top: 58.2%;
+	z-index: 100;
+	cursor: pointer;
+	border-radius: 64px;
+}
+
+.modal1 img {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1100;
+	display: block;
+	left: 0%;
+	top: 0%;
+}
+
+.closeModal1 {
+	position: absolute;
+	width: 17%;
+	height: 10%;
+	z-index: 1200;
+	top: 0%;
+	right: 41%;
+	cursor: pointer;
+}
+
+.next {
+	position: absolute;
+	width: 6%;
+	height: 8%;
+	top: 86.5%;
+    border-radius: 100px;
+    right: 45.6%;
+	bottom: 2.6%;
+	cursor: pointer;
+	z-index: 1300;
+}
+
+.vida1 {
+	position: absolute;
+    width: 4.3%;
+    top: 6.5%;
+    left: 4.7%;
+}
+
+.vida1 img {
+	width: 100%;
+	height: 100%;
+}
+
+.vida2 {
+	position: absolute;
+    width: 4.3%;
+    top: 6.5%;
+    left: 10.3%;
+}
+
+.vida2 img {
+	width: 100%;
+	height: 100%;
+}
+
+.vida3 {
+	position: absolute;
+    width: 4.3%;
+    top: 6.5%;
+    left: 15.9%;
+}
+
+.vida3 img {
+	width: 100%;
+	height: 100%;
+}
+
+
