@@ -267,22 +267,14 @@ body {
 	}
   }
 
+  @media screen and (max-width: 1024px) {
 
+	.puntaje {
+		font-size: calc(100vw / 29.5) !important;
+	}
+}
 
 @media screen and (max-width: 500px) {
-	/* .portada {
-		background-image: url('../images/Responsive/portada-01-mobile.jpg');
-		background-size: contain;
-		background-position-y: top;
-	} */
-
-	/* .btn1 {
-		width: 8.2%;
-		height: 4.6%;
-		top: 40.3%;
-		right: 5.5%;
-	} */
-
 	.video {
 		width: 36.9%;
 		height: 20.4%;
@@ -305,6 +297,7 @@ body {
 		font-size: calc(100vw / 30.5) !important;
 	}
 }
+
 
 .mobile {
 	height: 100dvh;
