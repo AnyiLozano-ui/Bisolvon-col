@@ -300,6 +300,10 @@ body {
         top: 60.9%;
         left: 50.3%;
 	}
+
+	.puntaje {
+		font-size: calc(100vw / 30.5);
+	}
 }
 
 .mobile {
