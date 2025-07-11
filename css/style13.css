@@ -294,7 +294,7 @@ body {
 	}
 
 	.puntaje {
-		font-size: calc(100vw / 30.5);
+		font-size: calc(100vw / 30.5) !important;
 	}
 }
 
